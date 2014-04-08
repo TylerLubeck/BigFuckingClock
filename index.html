@@ -16,6 +16,9 @@
                 text-align: center;
                 display: table-cell;
                 vertical-align: middle;
+                font-size:600%;
+            }
+            #thedate {
                 font-size:200%;
             }
         </style>
@@ -30,13 +33,17 @@
     </head>
     <body>
         <div id="theclock">
-            <h1 id="thetime">11:56 PM</h1>
+            <h1 id="thetime"></h1>
+            <h1 id="thedate"></h1>
         </div>
 
         <script>
             var time_block = document.getElementById('thetime');
+            var date_block = document.getElementById('thedate');
             setInterval(function(){
-                time_block.innerHTML = (new Date()).toLocaleString();
+                var t = new Date();
+                time_block.innerHTML = t.toLocaleTimeString();
+                date_block.innerHTML = t.toLocaleDateString();
             }, 1);
         </script>
     </body>
