@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <title> Big Fucking Clock </title>
+        <style>
+            html, body {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            body {
+                display: table;
+            }
+            #theclock {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+                font-size:200%;
+            }
+        </style>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+          ga('create', 'UA-35246903-3', 'bigfuckingclock.com');
+          ga('send', 'pageview');
+        </script>
+    </head>
+    <body>
+        <div id="theclock">
+            <h1 id="thetime">11:56 PM</h1>
+        </div>
+
+        <script>
+            var time_block = document.getElementById('thetime');
+            setInterval(function(){
+                time_block.innerHTML = (new Date()).toLocaleString();
+            }, 1);
+        </script>
+    </body>
+</html>
